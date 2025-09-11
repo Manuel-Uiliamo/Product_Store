@@ -1,7 +1,7 @@
-import expres from "express";
+import express from "express";
 import { createProducts, getProducts, updateProducts, deleteProducts } from "../controllers/products.controller.js";
 
-const router = expres.Router();
+const router = express.Router();
 
 // All API Methods
 
