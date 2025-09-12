@@ -36,7 +36,7 @@ export const updateProducts = async (req, res) => {
     const {id} = req.params;
     const product = req.body;
 
-    if(!mongoose.Types.ObjectId(id)){
+    if(!new mongoose.Types.ObjectId(id)){
         return res.status(404).json({success: false, message: "Invalid Product Id"});
     }
 
@@ -52,7 +52,7 @@ export const updateProducts = async (req, res) => {
 export const deleteProducts = async (req, res) => {
     const { id } = req.params;
 
-    if(!mongoose.Types.ObjectId(id)){
+    if(!new mongoose.Types.ObjectId(id)){
         return res.status(404).json({success: false, message: "Invalid Product Id"});
     }
 
